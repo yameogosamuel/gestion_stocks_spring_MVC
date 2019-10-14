@@ -1,0 +1,201 @@
+ <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorator="layout">
+<head>
+<meta charset="utf-8"/>
+<title>Ajouter un utilisateur</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css"
+	th:href="@{/css/bootstrap.min.css}"/>
+	
+	<link rel="stylesheet" type="text/css" href="../static/css/all.min.css"
+	th:href="@{/css/all.min.css}"/>
+	
+	 <link rel="stylesheet" type="text/css" href="../static/css/styles.css"
+	      th:href="@{/css/styles.css}"/>
+	
+	      
+	  <script src="../static/js/jquery.min.js"  th:src="@{/js/jquery.min.js}"></script>
+      <!-- <script src="../static/js/popper.min.js"  th:src="@{/js/popper.min.js}"></script> -->
+      <script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/popper.min.js"  th:src="@{https://getbootstrap.com/docs/4.1/assets/js/vendor/popper.min.js}"></script>
+      <script src="../static/js/bootstrap.min.js"  th:src="@{/js/bootstrap.min.js}"></script>
+      <script src="../static/js/script.js"  th:src="@{/js/script.js}"></script> 
+      
+      
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+       <a class="navbar-brand" href="/"><img th:src="@{/css/sidwaya.jpg}" width="90" height="60"/> Gestion des Stocks </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+               <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Stocks
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" th:href="@{/articles/user/index}">Consulter</a>
+                        <a class="dropdown-item" th:href="@{/articles/admin/form}">Ajouter</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Entrées
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" th:href="@{/entrees/user/index}">Consulter</a>
+                        <a class="dropdown-item" th:href="@{/entrees/admin/form}">Ajouter</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sorties
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" th:href="@{/sorties/user/index}">Consulter</a>
+                        <a class="dropdown-item" th:href="@{/sorties/admin/form}">Ajouter</a>
+                    </div>
+                </li>
+                 <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Famille
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" th:href="@{/famille/user/index}">Consulter</a>
+                        <a class="dropdown-item" th:href="@{/famille/admin/form}">Ajouter</a>
+                    </div>
+                </li>
+                 <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Fournisseur
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                       <a class="dropdown-item" th:href="@{/fournisseur/user/index}">Consulter</a>
+                        <a class="dropdown-item" th:href="@{/fournisseur/admin/form}">Ajouter</a>
+                    </div>
+                </li>
+                 <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Usages
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" th:href="@{/usages/user/index}">Consulter</a>
+                        <a class="dropdown-item" th:href="@{/usages/admin/form}">Ajouter</a>
+                    </div>
+                </li>
+                 <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       Unités
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" th:href="@{/unites/user/index}">Consulter</a>
+                        <a class="dropdown-item" th:href="@{/unites/admin/form}">Ajouter</a>
+                    </div>
+                </li>
+                 <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Utilisateur
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" th:href="@{/utilisateur/admin/index}">Consulter</a>
+                        <a class="dropdown-item" th:href="@{/utilisateur/admin/form}">Ajouter user</a>
+                         <a class="dropdown-item" th:href="@{/role/admin/index}">Ajouter role</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="form-inline my-2 my-lg-0">
+            	<label class="my-4 mx-2" th:inline="text">Bonjour [[${#httpServletRequest.remoteUser}]]</label><br>
+                <a th:href="@{/login?logout}" ><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button></a>
+                
+            </div>
+        </div>
+    </nav>
+    
+    
+
+   <div class="p-3 mb-2 bg-white text-dark my-4 rounded spacer col-md-6 col-md-offset-3 col-xs-12 center-block">
+		<div class="panel panel-primary">
+			<div class="panel-heading"><h2>Ajouter un utilisateur</h2></div>
+			<div class="panel-body">
+			  <form th:action="@{utilisateur/admin/save}" method="post">
+				<div class="row">
+					<div class="col">
+						<label class="control-label" >Matricule :</label>
+						<input type="text" class="form-control" placeholder="Matricule" name="matr" 
+						th:value="${users.matr}"/>
+						<span class="red" th:errors="${users.matr}"></span>
+					</div>
+					<div class="col">
+						<label class="control-label" >Nom :</label>
+						<input type="text" class="form-control" placeholder="Nom" name="nom"
+						th:value="${users.nom}"/>
+						<span class="red" th:errors="${users.nom}"></span>
+					</div>
+					
+				</div>
+				<div class="row">
+					<div class="col">
+						<label class="control-label" >Prénom :</label>
+						<input type="text" class="form-control" placeholder="Prénom" name="prenom"
+						th:value="${users.prenom}"/>
+						<span class="red" th:errors="${users.prenom}"></span>
+					</div>
+					<div class="col">
+						<label class="control-label" >Date de naissance :</label>
+						<input type="date" class="form-control"  name="dateN"
+						th:value="${users.dateN}"/>
+						<span class="red" th:errors="${users.dateN}"></span>
+					</div>
+				</div>
+			
+				<div class="row">
+					<div class="col">
+						<label class="control-label" >Login :</label>
+						<input type="text" class="form-control" placeholder="Login" name="login"
+						th:value="${users.login}"/>
+						<span class="red" th:errors="${users.login}"></span>
+					</div>
+					<div class="col">
+						<label class="control-label" >Password :</label>
+						<input type="password" class="form-control"  name="pass"/>
+						<span class="red" th:errors="${users.pass}"></span>
+					</div>
+				</div>
+				
+				
+				<div class="my-2">
+						<button type="submit" class="btn btn-primary btn-lg">Save</button>
+				</div>
+			 </form> 
+			</div>
+		</div>
+	</div>
+	
+				
+					
+  
+  <footer class="navbar-fixed-bottom">
+		<hr/>
+		<div class="container text-white">
+			<small>
+				Copyright @2019
+			</small>
+		</div>
+	</footer>
+	
+	
+</body>
+</html>
