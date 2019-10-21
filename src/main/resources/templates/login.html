@@ -23,9 +23,10 @@
 <body>
 			
 		<div class="login-page">
-			<span class="red" th:if="${param.error}">Votre login ou mot de passe est incorrect</span>
-			<span class="red" th:if="${param.logout}">Vous avez été deconnecté</span>
-            <div class="form">   
+			
+            <div class="form"> 
+            <span class="red" th:if="${param.error}">Votre login ou mot de passe est incorrect</span>
+			<span class="red" th:if="${param.logout}">Vous avez été deconnecté</span>  
               <form class="login-form" th:action="@{/login}" method="post">
                 <input type="text" placeholder="login" name="username"/>
                 <input type="password" placeholder="mot de passe" name="password"/>

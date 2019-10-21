@@ -129,7 +129,7 @@ public class Controleur {
 	
 	
 	  @RequestMapping(value="/") public String home() { return
-	  "redirect:/articles/user/index"; }
+	  "redirect:/acceuil"; }
 	 
 	 
 	  @RequestMapping(value="/403")
@@ -142,7 +142,10 @@ public class Controleur {
 		  return "login"; 
 		  }
 	
-	  
+	  @RequestMapping(value="/acceuil")
+	  public String acceuil() { 
+		  return "acceuil"; 
+		  }
 	  
 	  
 	    /**********************
@@ -655,8 +658,8 @@ public class Controleur {
 		  public String updateUr(Model modelUr, @Valid Users_roles roles, BindingResult bindingResult) {//
 				if (bindingResult.hasErrors())
 					return "role/Editer";
-				//List<Login> lgs=usersRepository.getLogins();
-			    //modelUr.addAttribute("lgs",lgs);
+				   List<Login> lgs=usersRepository.getLogins();
+			       modelUr.addAttribute("lgs",lgs);
 				users_rolesRepository.save(roles);
 			return "redirect:/role/admin/index";
 		  }

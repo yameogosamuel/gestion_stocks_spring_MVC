@@ -4,7 +4,7 @@
 	  layout:decorator="layout">
 <head>
 <meta charset="utf-8"/>
-<title>Ajouter un fournisseur</title>
+<title>Alerte</title>
 	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css"
 	th:href="@{/css/bootstrap.min.css}"/>
 	
@@ -26,7 +26,7 @@
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-       <a class="navbar-brand" href="/"><img th:src="@{/css/sidwaya.jpg}" width="90" height="60"/> Gestion des Stocks </a>
+        <a class="navbar-brand" href="/"><img th:src="@{/css/sidwaya.jpg}" width="90" height="60"/> Gestion des Stocks </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -35,7 +35,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
             	<li class="nav-item ">
-                    <a class="nav-link m-0" href="@{/acceuil}">Acceuil</a>
+                    <a class="nav-link m-0 btn btn-success text-light" href="@{/acceuil}">Acceuil</a>
                 </li>
                <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -78,13 +78,13 @@
                     </div>
                 </li>
                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle btn btn-success text-light" href="#" id="navbarDropdown" role="button"
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Fournisseur
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                        <a class="dropdown-item" th:href="@{/fournisseur/user/index}">Consulter</a>
-                        <a class="dropdown-item active" th:href="@{/fournisseur/admin/form}">Ajouter</a>
+                        <a class="dropdown-item" th:href="@{/fournisseur/admin/form}">Ajouter</a>
                     </div>
                 </li>
                  <li class="nav-item dropdown">
@@ -129,69 +129,20 @@
     
     
 
-   <div class="p-3 mb-2 bg-white text-dark my-4 rounded spacer col-md-6 col-md-offset-3 col-xs-12 center-block">
-		<div class="panel panel-primary">
-			<div class="panel-heading"><h2>Ajouter un fournisseur</h2></div>
-			<div class="panel-body">
-			  <form th:action="@{fournisseur/admin/save}" method="post">
-				<div class="row">
-					<div class="col">
-						<label class="control-label" >Nom :</label>
-						<input type="text" class="form-control" placeholder="Nom" name="nom"
-						th:value="${fournisseur.nom}"/>
-						<span class="red" th:errors="${fournisseur.nom}"></span>
-					</div>
-					<div class="col">
-						<label class="control-label" >Adresse :</label>
-						<input type="text" class="form-control" placeholder="Adresse" name="adr" 
-						th:value="${fournisseur.adr}"/>
-						<span class="red" th:errors="${fournisseur.adr}"></span>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col">
-						<label class="control-label" >Pays :</label>
-						<input type="text" class="form-control" placeholder="Pays" name="pays"
-						th:value="${fournisseur.pays}"/>
-						<span class="red" th:errors="${fournisseur.pays}"></span>
-					</div>
-					<div class="col">
-						<label class="control-label" >Téléphone :</label>
-						<input type="text" class="form-control" placeholder="Téléphone" name="tel"
-						th:value="${fournisseur.tel}"/>
-						<span class="red" th:errors="${fournisseur.tel}"></span>
-					</div>
-				</div>
-			
-					<div >
-						<label class="control-label" >Email :</label>
-						<input type="text" class="form-control" placeholder="Email" name="email"
-						 th:value="${fournisseur.email}"/>
-						<span class="red" th:errors="${fournisseur.email}"></span>
-					</div>
-					
-				
-				
-				<div class="my-2">
-						<button type="submit" class="btn btn-primary btn-lg">Save</button>
-				</div>
-			 </form> 
-			</div>
-		</div>
-	</div>
+   <div class=" center-block">
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<img th:src="@{/css/sidwaya.jpg}" class="img-responsive center-block"/>
+  </div>
 	
 				
 					
   
-  <footer class="navbar-fixed-bottom ">
-		<hr/>
-		<div class="container text-white">
-			<small>
-				Copyright @2019
-			</small>
-		</div>
-	</footer>
-	
-	
+  
 </body>
 </html>

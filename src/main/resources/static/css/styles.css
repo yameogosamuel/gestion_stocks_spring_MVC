@@ -124,9 +124,9 @@
 	margin-top: 20px;
 }
 
-body {
+/* body {
     background: #059bff;
-    /* fallback for old browsers */
+    fallback for old browsers
     background: -webkit-linear-gradient(right, #059bff, #101022);
     background: -moz-linear-gradient(right, #059bff, #101022);
     background: -o-linear-gradient(right, #059bff, #101022);
@@ -134,5 +134,16 @@ body {
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+} */
+
+body {
+    background: green;
+    fallback for old browsers
+    
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
+ 
+ 
